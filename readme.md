@@ -9,7 +9,9 @@
 
 * `rosrun gpg_bran imv_view.py` - view image from the camera
 * `rosrun gpg_bran key_teleop.py` - teleoperation with cursor keys
+* `roslaunch gpg_bran gopigo3_slam.launch` - begin slam to build a map
 
+## General ROS commands (not from us)
 ## Other files
 
 
