@@ -1,6 +1,6 @@
 <launch>
 
-    <include file="$(find mygopigo)/launch/gopigo3.launch" />
+    <include file="$(find gpg_bran)/launch/gopigo3.launch" />
 
     <node name="ydlidar_node" pkg="ydlidar" type="ydlidar_node" output="screen" respawn="false" >
         <param name="port" type="string" value="/dev/ydlidar"/>
