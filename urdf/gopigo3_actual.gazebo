@@ -168,7 +168,7 @@
     <visual>
       <origin xyz="0.1 0 0.0755" rpy="1.570795 0 1.570795" />
       <geometry>
-        <mesh filename="package://gopigo3_navigation/meshes/IR_Sensor_Sharp_GP2Y_solid.stl" scale="0.0025 0.0025 0.0025"/>
+        <mesh filename="package://gpg_bran/meshes/IR_Sensor_Sharp_GP2Y_solid.stl" scale="0.0025 0.0025 0.0025"/>
       </geometry>
       <material name="red"/>
     </visual>
@@ -185,7 +185,7 @@
     <visual>
       <origin xyz="0.125 0 0.025" rpy="0 1.570795 0" />
       <geometry>
-        <mesh filename="package://gopigo3_navigation/meshes/piCamera.stl" scale="0.0025 0.0025 0.0025"/>
+        <mesh filename="package://gpg_bran/meshes/piCamera.stl" scale="0.0025 0.0025 0.0025"/>
       </geometry>
       <material name="yellow"/>
     </visual>
@@ -238,7 +238,7 @@
     <visual name="sensor_body">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://gopigo3_navigation/meshes/X4.stl" scale="0.0015 0.0015 0.0015"/> 
+        <mesh filename="package://gpg_bran/meshes/X4.stl" scale="0.0015 0.0015 0.0015"/> 
       </geometry>
       <material name="yellow"/>
     </visual>

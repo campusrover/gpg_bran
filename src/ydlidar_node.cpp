@@ -61,7 +61,7 @@ int main(int argc, char * argv[]) {
     ros::NodeHandle nh_private("~");
     nh_private.param<std::string>("port", port, "/dev/ydlidar"); 
     nh_private.param<int>("baudrate", baudrate, 115200); 
-    nh_private.param<std::string>("frame_id", frame_id, "laser_frame");
+    nh_private.param<std::string>("frame_id", frame_id, "base_scan");
     nh_private.param<bool>("resolution_fixed", resolution_fixed, "true");
     nh_private.param<bool>("intensity", intensities, "false");
     nh_private.param<bool>("low_exposure", low_exposure, "false");
@@ -131,8 +131,12 @@ int main(int argc, char * argv[]) {
             scan_msg.angle_min = scan.config.min_angle;
             scan_msg.angle_max = scan.config.max_angle;
             scan_msg.angle_increment = scan.config.ang_increment;
-            scan_msg.scan_time = scan.config.scan_time;
-            scan_msg.time_increment = scan.config.time_increment;
+            // scan_msg.scan_time = scan.config.scan_time;
+            // scan_msg.time_increment = scan.config.time_increment;
+            // See: https://answers.ros.org/question/351704/transform-senderunknown_publisher-unknown-reason-for-transform-failure/
+            scan_msg.scan_time = scan.config.scan_time/1000000000.0; 
+            scan_msg.time_increment = scan.config.time_increment/1000000000.0;
+            
             scan_msg.range_min = scan.config.min_range;
             scan_msg.range_max = scan.config.max_range;
             

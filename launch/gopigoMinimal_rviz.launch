@@ -1,10 +1,10 @@
 <launch>
    <!-- values passed by command line input -->     
-   <arg name="model" default="gopigoMinimal" />
+   <arg name="model" default="gopigoMinimal.urdf" />
    <arg name="gui" default="False" />
 
    <!-- set these parameters on Parameter Server -->
-   <param name="robot_description" textfile="$(find rviz_basics)/urdf/$(arg model).urdf" />
+   <param name="robot_description" textfile="$(find gpg_bran)/urdf/$(arg model)" />
 
    <!-- Start 3 nodes: joint_state_publisher, robot_state_publisher and rviz -->
 
@@ -15,6 +15,6 @@
    <!-- Combine joint values to TF-->
    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
-   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rviz_basics)/rviz/$(arg model).rviz" required="true" />
+   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find gpg_bran)/rviz/$(arg model).rviz" required="true" />
    <!-- (required = "true") if rviz dies, entire roslaunch will be killed -->
 </launch>
